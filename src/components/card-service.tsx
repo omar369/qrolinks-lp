@@ -1,3 +1,6 @@
+import React from 'react';
+import Image from 'next/image';
+
 interface CardProps {
   icon: string;
   title: string;
@@ -5,12 +8,7 @@ interface CardProps {
   href?: string;
 }
 
-const CardService: React.FC<CardProps> = ({
-  icon,
-  title,
-  description,
-  href,
-}) => {
+const Card: React.FC<CardProps> = ({ icon, title, description, href }) => {
   return (
     <div
       className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md transform transition duration-500 hover:shadow-xl hover:scale-105"
@@ -18,7 +16,12 @@ const CardService: React.FC<CardProps> = ({
       data-aos-delay="100"
     >
       <div className="text-6xl mb-4">
-        <i className={icon}></i>
+        <Image
+          src={`/images/icons/${icon}.svg`}
+          alt="Icon"
+          width={100}
+          height={100}
+        />
       </div>
       <h4 className="text-xl font-semibold mb-2">
         <a href={href ? href : '#'}>{title}</a>
@@ -28,4 +31,4 @@ const CardService: React.FC<CardProps> = ({
   );
 };
 
-export default CardService;
+export default Card;
