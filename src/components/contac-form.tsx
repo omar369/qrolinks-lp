@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg space-y-4"
+        className="max-w mx-2 p-4 bg-gray-900 shadow-md rounded-lg space-y-4 text-white"
       >
         <FormField
           name="name"
@@ -98,7 +98,7 @@ const ContactForm: React.FC = () => {
 
         <Button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+          className="w-full bg-yellow-300 text-black py-2 px-4 rounded-lg hover:bg-yellow-600"
         >
           Enviar
         </Button>

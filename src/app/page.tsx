@@ -38,7 +38,7 @@ export default function Home() {
             </div>
           </div>
         </Parallax>
-        <section className="py-6 bg-white text-center">
+        <section className="py-6 bg-white text-center" id="nosotros">
           <div className="container mx-auto py-6" data-aos="fade-up">
             <div className="flex justify-center p-4">
               <h3 className="text-2xl md:text-2xl mb-4">
@@ -58,7 +58,7 @@ export default function Home() {
                   src="/images/portadaOG.jpg"
                   className="img-fluid "
                   alt="About us"
-                  width={1000}
+                  width={1200}
                   height={100}
                 />
               </div>
@@ -72,7 +72,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="px-20 bg-gray-100 text-center p-12">
+        <section className="px-20 bg-gray-100 text-center p-12" id="servicios">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
             SERVICIOS Y PRODUCTOS
           </h2>
@@ -84,7 +84,7 @@ export default function Home() {
             <CardService
               icon={'tema'}
               title={'Temáticas'}
-              description={'¡Cuentanos sobre que quieres celebrar!'}
+              description={'...'}
             />
             <CardService
               icon={'igna'}
@@ -104,7 +104,7 @@ export default function Home() {
             <CardService
               icon={'meeting'}
               title={'Meetings'}
-              description={'Equipo audiovisual para tus juntas importantes'}
+              description={'...'}
             />
             <CardService
               icon={'conf'}
@@ -128,7 +128,7 @@ export default function Home() {
             />
           </div>
         </section>
-        <section className="px-20 bg-gray-100 text-center p-12">
+        <section className="px-20 bg-gray-100 text-center p-12" id="clientes">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
             Nuestros Clientes
           </h2>
@@ -140,14 +140,14 @@ export default function Home() {
           <div className="container mx-auto py-12">
             <Carousel images={imagesCarousel} />
           </div>
-          <h2 className="text-2xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4" id="galeria">
             Un poco de nuestro trabajo
           </h2>
           <Gallery />
         </section>
-        <section className="px-20 bg-gray-100 text-center p-12">
+        <section className="px-20 bg-gray-900 text-center p-12" id="contacto">
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-center mb-4">
+            <h2 className="text-2xl font-bold text-center mb-4 text-white">
               Contáctanos
             </h2>
             <ContactForm />

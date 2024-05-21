@@ -16,39 +16,40 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: 'Alert Dialog',
-    href: '/docs/primitives/alert-dialog',
+    title: 'Temáticas',
+    href: '#servicios',
     description:
-      'A modal dialog that interrupts the user with important content and expects a response.',
+      '¡Para festividades o la dinámica que sea! Conseguimos estructuras y adornos patrios, naviseños, dia de muertos, san valentin, casino, etc.',
   },
   {
-    title: 'Hover Card',
-    href: '/docs/primitives/hover-card',
+    title: 'Activaciones',
+    href: '#servicios',
     description:
-      'For sighted users to preview content available behind a link.',
+      'Si hay una ignauguración o apertura dentro de la empresa, te conseguimos lo necesario para que darle la importancia que se merece.',
   },
   {
-    title: 'Progress',
-    href: '/docs/primitives/progress',
+    title: 'Banquetes',
+    href: '#servicios',
     description:
-      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
+      'Contamos con servicios de comida y coctelería dentro y fuera de tu empresa. Trabajamos con restaurantes y bares en la ciudad de Querétaro.',
   },
   {
-    title: 'Scroll-area',
-    href: '/docs/primitives/scroll-area',
-    description: 'Visually or semantically separates content.',
+    title: 'Conferencias',
+    href: '#servicios',
+    description:
+      'Llevamos equipo audiovisual extraordinario para comunicar un mensaje importante a todo tu equipo.',
   },
   {
-    title: 'Tabs',
-    href: '/docs/primitives/tabs',
+    title: 'Premiaciones',
+    href: '#servicios',
     description:
-      'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
+      'Podemos conseguir desde antes los reconocimientos como trofeos y un gran equipo de audio para anunciarlos.',
   },
   {
-    title: 'Tooltip',
-    href: '/docs/primitives/tooltip',
+    title: 'Eventos Familiares',
+    href: '#servicios',
     description:
-      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
+      'Si requieres de juegos y dinámicas para que las familias se diviertan dentro de tu empresa, también lo podemos hacer realidad.',
   },
 ];
 
@@ -64,28 +65,27 @@ export function NavMenu() {
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
+                    href="#nosotros"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
                       Qrolinks
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
                       Somos un equipo dedicado a brindar la mejor experiencia
-                      para tus eventos empresariales. Contamos con todo lo
-                      necesario para la renta de mobiliario y experiencia en
-                      organización profesional de eventos.
+                      para tus eventos empresariales y que nuestros clientes
+                      solo se encarguen de disfrutar de la experiencia.
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
+              <ListItem href="#nosotros" title="¿Cómo trabajamos?">
+                Lo que ofrecemos en cada servicio
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
+              <ListItem href="#servicios" title="Servicios">
+                Servicios y Paquetes
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem href="#clientes" title="Nuestro trabajo">
+                Muestra de nuestro trabajo y clientes
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -107,7 +107,7 @@ export function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="#galeria" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Galería
             </NavigationMenuLink>
