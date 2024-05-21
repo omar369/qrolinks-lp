@@ -5,6 +5,7 @@ import { CardAbout } from '@/components/card-aboutUs';
 import CardService from '@/components/card-service';
 import Gallery from '@/components/galeria';
 import Carousel from '@/components/carousel-brands';
+import ContactForm from '@/components/contac-form';
 
 export default function Home() {
   const imagesCarousel = [
@@ -143,6 +144,14 @@ export default function Home() {
             Un poco de nuestro trabajo
           </h2>
           <Gallery />
+        </section>
+        <section className="px-20 bg-gray-100 text-center p-12">
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-center mb-4">
+              Contáctanos
+            </h2>
+            <ContactForm />
+          </div>
         </section>
         <footer className="flex items-center justify-center w-full h-16 bg-gray-200">
           <p>
