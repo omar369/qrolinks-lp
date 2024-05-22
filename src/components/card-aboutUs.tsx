@@ -27,7 +27,6 @@ const puntos = [
       'Contamos con personal que pueda auxiliar a nuestros clientes antes y durante el evento.',
   },
 ];
-
 type CardProps = React.ComponentProps<typeof Card>;
 
 export function CardAbout({ className, ...props }: CardProps) {
@@ -41,11 +40,11 @@ export function CardAbout({ className, ...props }: CardProps) {
           {puntos.map((punto, index) => (
             <div
               key={index}
-              className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
+              className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0 sm:grid-cols-[25px_1fr_sm]"
             >
               <span className="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
               <div className="space-y-1">
-                <p className="text-md font-medium leading-none">
+                <p className="text-lg font-medium leading-none">
                   {punto.title}
                 </p>
                 <p className="text-md text-muted-foreground">
@@ -55,7 +54,7 @@ export function CardAbout({ className, ...props }: CardProps) {
             </div>
           ))}
         </div>
-        <div className=" flex items-center space-x-4 p-4">
+        <div className="flex items-center space-x-4 p-4">
           <div className="flex-1 space-y-1">
             <p className="text-lg leading-none italic">
               En Qrolinks, nos preocupamos por cada detalle e integramos una

@@ -75,3 +75,11 @@
     @apply h-full m-0 p-0;
   }
 }
+
+@media (max-width: 640px) {
+  @layer base {
+    body {
+      @apply text-sm;
+    }
+  }
+}

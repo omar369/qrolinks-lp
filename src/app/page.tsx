@@ -38,17 +38,17 @@ export default function Home() {
             </div>
           </div>
         </Parallax>
-        <section className="py-6 bg-white text-center" id="nosotros">
-          <div className="container mx-auto py-6" data-aos="fade-up">
-            <div className="flex justify-center p-4">
-              <h3 className="text-2xl md:text-2xl mb-4">
+        <section className="bg-white text-center" id="nosotros">
+          <div className="container" data-aos="fade-up">
+            <div className="flex justify-center p-4 mx-2 md:mx-10">
+              <h3 className="text-md md:text-2xl sm:text-2xl mb-4">
                 Buscar proveedores, hacer cotizaciones, coordinar, evaluar,
                 decidir, etc. pueden ser tareas que consumen mucho tiempo.
                 Nosotros nos preocupemos por esos detalles y tu solo te encargas
                 de disfrutar.
               </h3>
             </div>
-            <div className="flex flex-col lg:flex-row p-4">
+            <div className="flex flex-col lg:flex-row xs:p-1 xs:mx-1 sm:p-3 sm:mx-3 md:p-6 md:mx-6 lg:p-10 lg:mx-10">
               <div
                 className="lg:order-2 lg:w-1/2 flex justify-center p-4"
                 data-aos="fade-left"
@@ -72,7 +72,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="px-20 bg-gray-100 text-center p-12" id="servicios">
+        <section
+          className="px-2 sm:px-10 lg:px-20 bg-gray-100 text-center p-10"
+          id="servicios"
+        >
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
             SERVICIOS Y PRODUCTOS
           </h2>
@@ -80,7 +83,7 @@ export default function Home() {
             Algunos ejemplos de eventos y los productos que te sugerimos para
             cada uno.
           </p>
-          <div className="grid grid-cols-3 gap-6 justify-center items-center p-10 mx-10">
+          <div className="grid grid-cols-3 gap-6 justify-center items-center p-3 mx-3 sm:p-6 sm:mx-6 md:p-15 md:mx-15 lg:p-20 lg:mx-20">
             <CardService
               icon={'tema'}
               title={'Temáticas'}
@@ -88,7 +91,7 @@ export default function Home() {
             />
             <CardService
               icon={'igna'}
-              title={'Ignauguraciones / Activaciones'}
+              title={'Ignauguraciones'}
               description={'...'}
             />
             <CardService
@@ -113,22 +116,21 @@ export default function Home() {
             />
             <CardService
               icon={'fam'}
-              title={'Eventos Familiares'}
+              title={'Familiares'}
               description={'...'}
             />
             <CardService
               icon={'sports'}
-              title={'Eventos Deportivos'}
+              title={'Deportivos'}
               description={'...'}
             />
-            <CardService
-              icon={'party'}
-              title={'La Pura Fiesta'}
-              description={'...'}
-            />
+            <CardService icon={'party'} title={'Fiestas'} description={'...'} />
           </div>
         </section>
-        <section className="px-20 bg-gray-100 text-center p-12" id="clientes">
+        <section
+          className="m-0 px-0 lg:py-10 bg-gray-100 text-center"
+          id="clientes"
+        >
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
             Nuestros Clientes
           </h2>
@@ -137,7 +139,7 @@ export default function Home() {
             fuera de tu empresa.
           </p>
           {/* SCROLL HORIZONTAL DE MARCAS Y RESTAURANTES */}
-          <div className="container mx-auto py-12">
+          <div className="container mx-0 px-0">
             <Carousel images={imagesCarousel} />
           </div>
           <h2 className="text-2xl md:text-4xl font-bold mb-4" id="galeria">
@@ -145,7 +147,10 @@ export default function Home() {
           </h2>
           <Gallery />
         </section>
-        <section className="px-20 bg-gray-900 text-center p-12" id="contacto">
+        <section
+          className="mx-2 p-3 lg:mx-30 lg:py-30 bg-gray-900 text-center"
+          id="contacto"
+        >
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-center mb-4 text-white">
               Contáctanos

@@ -1,13 +1,19 @@
+'use client';
+
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { NavMenu } from './nav-menu';
 import Image from 'next/image';
 import logo from '../../public/images/logo1.png';
 import Link from 'next/link';
+import { useState } from 'react';
+import { HiMenu, HiX } from 'react-icons/hi'; // Importamos los íconos de hamburguesa y cerrar
 
 const MainNav: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 flex items-center justify-between bg-black bg-opacity-50 text-white px-10 py-1">
-      <div className="flex items-center px-10">
+    <nav className="fixed top-0 left-0 right-0 z-10 flex flex-col sm:flex-row items-center justify-between bg-black bg-opacity-50 text-gray-300 px-4 sm:px-10 py-2 sm:py-1">
+      <div className="flex items-center justify-between w-full sm:w-auto">
         <Link href="/">
           <Image
             src={logo}
@@ -16,12 +22,26 @@ const MainNav: React.FC = () => {
             height={logo.height / 3}
           />
         </Link>
-        <NavMenu />
+        <div className="sm:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-2xl focus:outline-none"
+          >
+            {isOpen ? <HiX /> : <HiMenu />}
+          </button>
+        </div>
       </div>
-      <div className="flex items-center px-10">
-        <FaFacebook className="mr-3 text-2xl" />
-        <FaInstagram className="mr-3 text-2xl" />
-        <FaWhatsapp className="mr-3 text-2xl" />
+      <div
+        className={`sm:flex ${
+          isOpen ? 'flex' : 'hidden'
+        } flex-col sm:flex-row items-center px-4 sm:px-10 mt-2 sm:mt-0`}
+      >
+        <NavMenu />
+        <div className="flex items-center mt-2 sm:mt-0 ">
+          <FaFacebook className="mr-3 text-lg" />
+          <FaInstagram className="mr-3 text-lg" />
+          <FaWhatsapp className="mr-3 text-lg" />
+        </div>
       </div>
     </nav>
   );

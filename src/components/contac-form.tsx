@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="max-w mx-2 p-4 bg-gray-900 shadow-md rounded-lg space-y-4 text-white"
+        className="max-w mx-10 px-10 lg:mx-30 lg:p-30 bg-gray-900 shadow-md rounded-lg space-y-4 text-white"
       >
         <FormField
           name="name"
@@ -47,7 +47,7 @@ const ContactForm: React.FC = () => {
             <FormItem>
               <FormLabel>Nombre</FormLabel>
               <FormControl>
-                <Input {...field} />
+                <Input {...field} className="sm:w-full" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -61,7 +61,7 @@ const ContactForm: React.FC = () => {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input type="email" {...field} />
+                <Input type="email" {...field} className="sm:w-full" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -75,7 +75,7 @@ const ContactForm: React.FC = () => {
             <FormItem>
               <FormLabel>Asunto</FormLabel>
               <FormControl>
-                <Input {...field} />
+                <Input {...field} className="sm:w-full" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -89,7 +89,7 @@ const ContactForm: React.FC = () => {
             <FormItem>
               <FormLabel>Mensaje</FormLabel>
               <FormControl>
-                <Textarea rows={5} {...field} />
+                <Textarea rows={5} {...field} className="sm:w-full" />
               </FormControl>
               <FormMessage />
             </FormItem>

@@ -28,12 +28,14 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
     return () => ctx.revert();
   }, [images]);
-
   return (
     <div className="relative w-full h-40 overflow-hidden" ref={carouselRef}>
       <div className="flex space-x-4 w-max">
         {images.map((image, index) => (
-          <div key={index} className="flex-none w-96 h-40 carousel-item">
+          <div
+            key={index}
+            className="flex-none w-96 sm:w-80 md:w-96 lg:w-96 h-40 carousel-item"
+          >
             <Image
               src={image}
               alt={`Image ${index}`}

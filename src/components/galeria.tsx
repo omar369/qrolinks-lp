@@ -29,11 +29,11 @@ const images = [
 
 const Gallery: React.FC = () => {
   return (
-    <div className="grid grid-cols-3 gap-4 p-4 mx-20">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 mx-4 sm:mx-8 md:mx-20">
       {images.map((image, index) => (
         <div
           key={index}
-          className={`relative w-full h-48 ${image.className} overflow-hidden transform transition-transform duration-500 hover:scale-105`}
+          className={`relative w-full h-48 sm:h-64 md:h-80 ${image.className} overflow-hidden transform transition-transform duration-500 hover:scale-105`}
         >
           <Image
             src={image.src}

@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-
 import { cn } from '@/lib/utils';
 import {
   NavigationMenu,
@@ -15,42 +14,7 @@ import {
 } from '@/components/ui/navigation-menu';
 
 const components: { title: string; href: string; description: string }[] = [
-  {
-    title: 'Temáticas',
-    href: '#servicios',
-    description:
-      '¡Para festividades o la dinámica que sea! Conseguimos estructuras y adornos patrios, naviseños, dia de muertos, san valentin, casino, etc.',
-  },
-  {
-    title: 'Activaciones',
-    href: '#servicios',
-    description:
-      'Si hay una ignauguración o apertura dentro de la empresa, te conseguimos lo necesario para que darle la importancia que se merece.',
-  },
-  {
-    title: 'Banquetes',
-    href: '#servicios',
-    description:
-      'Contamos con servicios de comida y coctelería dentro y fuera de tu empresa. Trabajamos con restaurantes y bares en la ciudad de Querétaro.',
-  },
-  {
-    title: 'Conferencias',
-    href: '#servicios',
-    description:
-      'Llevamos equipo audiovisual extraordinario para comunicar un mensaje importante a todo tu equipo.',
-  },
-  {
-    title: 'Premiaciones',
-    href: '#servicios',
-    description:
-      'Podemos conseguir desde antes los reconocimientos como trofeos y un gran equipo de audio para anunciarlos.',
-  },
-  {
-    title: 'Eventos Familiares',
-    href: '#servicios',
-    description:
-      'Si requieres de juegos y dinámicas para que las familias se diviertan dentro de tu empresa, también lo podemos hacer realidad.',
-  },
+  // ... (tu lista de componentes)
 ];
 
 export function NavMenu() {
@@ -58,7 +22,7 @@ export function NavMenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Nosotros</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="">Nosotros</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -90,10 +54,10 @@ export function NavMenu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuTrigger>Servicios / Productos</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] sm:w-[300px]">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
@@ -105,11 +69,18 @@ export function NavMenu() {
               ))}
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
         <NavigationMenuItem>
           <Link href="#galeria" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Galería
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="#contacto" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Contacto
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
