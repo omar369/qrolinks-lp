@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="max-w mx-10 px-10 lg:mx-30 lg:p-30 bg-gray-900 shadow-md rounded-lg space-y-4 text-white"
+        className="max-w mx-10 px-10 lg:mx-30 lg:p-30 bg-black shadow-md rounded-lg space-y-4 text-black"
       >
         <FormField
           name="name"
