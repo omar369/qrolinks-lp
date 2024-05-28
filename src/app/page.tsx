@@ -139,7 +139,7 @@ export default function Home() {
             fuera de tu empresa.
           </p>
           {/* SCROLL HORIZONTAL DE MARCAS Y RESTAURANTES */}
-          <div className="container mx-0 px-0">
+          <div className="mx-0 px-0">
             <Carousel images={imagesCarousel} />
           </div>
           <h2 className="text-2xl md:text-4xl font-bold mb-4" id="galeria">
