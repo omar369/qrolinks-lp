@@ -29,11 +29,18 @@ export default function Home() {
         <Parallax>
           <div className="flex items-center justify-center h-full bg-black bg-opacity-50 text-white text-center p-8">
             <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                Bienvenido a QROLINKS
-              </h1>
+              <h3 className="text-lg md:text-4xl font-bold mb-4">
+                Todo lo que necesitas para tu evento empresarial.
+                <Image
+                  src="/images/logo_negativo.png"
+                  alt="Logo"
+                  className="mx-auto"
+                  width={500}
+                  height={500}
+                />
+              </h3>
               <p className="text-lg md:text-2xl">
-                Nos encargamos de todo para tu evento empresarial.
+                Para que tu solo te encargues de disfrutar.
               </p>
             </div>
           </div>
