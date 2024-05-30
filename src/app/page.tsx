@@ -155,7 +155,7 @@ export default function Home() {
           <Gallery />
         </section>
         <section
-          className="mx-2 p-3 lg:mx-30 lg:py-30 bg-black text-center"
+          className="mx-2 p-3 lg:mx-30 lg:py-30 bg-gray-800 text-center"
           id="contacto"
         >
           <div className="mb-12">
