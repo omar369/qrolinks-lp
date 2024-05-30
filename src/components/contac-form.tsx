@@ -29,9 +29,25 @@ const ContactForm: React.FC = () => {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data: ContactFormValues) => {
-    console.log(data);
-    // Aquí puedes manejar el envío del formulario, como enviarlo a una API
+  const onSubmit = async (data: ContactFormValues) => {
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Error al enviar el correo');
+      }
+
+      alert('Correo enviado con éxito');
+    } catch (error) {
+      console.error(error);
+      alert('Hubo un error al enviar el correo');
+    }
   };
 
   return (

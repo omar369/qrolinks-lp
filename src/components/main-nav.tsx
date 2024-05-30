@@ -3,7 +3,7 @@
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { NavMenu } from './nav-menu';
 import Image from 'next/image';
-import logo from '../../public/images/logo_negativo.png';
+import logo from '../../public/images/logo_negativo.svg';
 import Link from 'next/link';
 import { useState } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi'; // Importamos los íconos de hamburguesa y cerrar

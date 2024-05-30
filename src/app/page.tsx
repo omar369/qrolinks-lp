@@ -32,7 +32,7 @@ export default function Home() {
               <h3 className="text-lg md:text-4xl font-bold mb-4">
                 Todo lo que necesitas para tu evento empresarial.
                 <Image
-                  src="/images/logo_negativo.png"
+                  src="/images/logo_negativo.svg"
                   alt="Logo"
                   className="mx-auto"
                   width={500}
