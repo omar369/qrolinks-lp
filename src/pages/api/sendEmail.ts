@@ -24,10 +24,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     text: `Nombre: ${name}\nEmail: ${email}\nMensaje:\n${message}`,
   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
+  transporter.sendMail(mailOptions, (error) => {
     if (error) {
+      console.log('Error al enviar el correo:', error); // Agrega este log para imprimir el error
       return res.status(500).json({ error: error.message });
     } else {
+      console.log('Correo enviado con éxito'); // Agrega este log para indicar que el correo se envió correctamente
       return res.status(200).json({ message: 'Email enviado con éxito' });
     }
   });
