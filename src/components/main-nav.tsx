@@ -39,7 +39,12 @@ const MainNav: React.FC = () => {
         <NavMenu />
         <div className="flex items-center mt-2 sm:mt-0 ">
           <FaFacebook className="mr-3 text-lg" />
-          <FaInstagram className="mr-3 text-lg" />
+          <Link href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61560813964412">
+            <FaFacebook className="mr-3 text-lg" />
+          </Link>
+          <Link href="https://www.instagram.com/qrolinks/">
+            <FaInstagram className="mr-3 text-lg" />
+          </Link>
           <FaWhatsapp className="mr-3 text-lg" />
         </div>
       </div>
